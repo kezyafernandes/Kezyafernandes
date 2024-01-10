@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Praticando Javascript - calculadora</title>
+</head>
+<body>
+
+</body>
+ 
+<script type="text/javascript">
+// Função para realizar a operação de adição
+function add(a, b) {
+  return a + b;
+}
+
+// Função para realizar a operação de subtração
+function subtract(a, b) {
+  return a - b;
+}
+
+// Função para realizar a operação de multiplicação
+function multiply(a, b) {
+  return a * b;
+}
+
+// Função para realizar a operação de divisão
+function divide(a, b) {
+  if (b === 0) {
+    return "Não é possível dividir por zero.";
+  }
+  return a / b;
+}
+
+// Função principal para a calculadora
+function calculator() {
+  const operation = prompt("Escolha uma operação: +, -, *, /");
+  
+  const num1 = parseFloat(prompt("Digite o primeiro número:"));
+  const num2 = parseFloat(prompt("Digite o segundo número:"));
+
+  let result;
+
+  switch (operation) {
+    case "+":
+      result = add(num1, num2);
+      break;
+    case "-":
+      result = subtract(num1, num2);
+      break;
+    case "*":
+      result = multiply(num1, num2);
+      break;
+    case "/":
+      result = divide(num1, num2);
+      break;
+    default:
+      result = "Operação inválida.";
+      break;
+  }
+
+  alert("O resultado da operação é: " + result);
+}
+
+// Chamar a função principal para iniciar a calculadora
+calculator();
+</script>
+</html>
